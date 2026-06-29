@@ -1,8 +1,11 @@
 # AI Deobfuscator
 
 [![ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/gnaixnaij)
+[![Web App](https://img.shields.io/badge/Web%20App-deobfuscator--web.onrender.com-58a6ff?style=flat-square)](https://deobfuscator-web.onrender.com)
 
 Deobfuscate PowerShell, VBA, and JavaScript scripts using static analysis and/or LLMs.
+
+**🌐 Try the web version: https://deobfuscator-web.onrender.com**
 
 Detects and reverses common obfuscation techniques to reveal the original intent of malicious scripts.
 
