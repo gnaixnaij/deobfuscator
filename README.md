@@ -1,5 +1,7 @@
 # AI Deobfuscator
 
+[![ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/gnaixnaij)
+
 Deobfuscate PowerShell, VBA, and JavaScript scripts using static analysis and/or LLMs.
 
 Detects and reverses common obfuscation techniques to reveal the original intent of malicious scripts.
@@ -109,6 +111,10 @@ var _0x5678 = "https://evil.com";
 | Variable | Description |
 |----------|-------------|
 | `OPENAI_API_KEY` | API key for LLM-powered deobfuscation |
+
+## Support
+
+If this tool helps you in your work, consider [buying me a coffee](https://ko-fi.com/gnaixnaij). It keeps the project alive and the deobfuscation engine improving.
 
 ## License
 
