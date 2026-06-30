@@ -1,6 +1,5 @@
 import base64
 import re
-import zlib
 
 def decode_base64(s):
     try:
