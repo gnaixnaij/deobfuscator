@@ -2,6 +2,8 @@
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://python.org)
 [![Ruff](https://img.shields.io/badge/Linted%20with-Ruff-261230?logo=ruff&logoColor=white)](https://github.com/astral-sh/ruff)
+[![CI](https://img.shields.io/github/actions/workflow/status/gnaixnaij/deobfuscator/lint.yml?branch=main&label=lint&logo=github)](https://github.com/gnaixnaij/deobfuscator/actions)
+[![Release](https://img.shields.io/github/v/release/gnaixnaij/deobfuscator?logo=github)](https://github.com/gnaixnaij/deobfuscator/releases)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/gnaixnaij)
 [![Web App](https://img.shields.io/badge/Web%20App-deobfuscator--web.onrender.com-58a6ff?style=flat-square)](https://deobfuscator-web.onrender.com)
