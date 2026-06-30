@@ -1,5 +1,8 @@
 # AI Deobfuscator
 
+[![Python](https://img.shields.io/badge/Python-3.8%2B-3776AB?logo=python&logoColor=white)](https://python.org)
+[![Ruff](https://img.shields.io/badge/Linted%20with-Ruff-261230?logo=ruff&logoColor=white)](https://github.com/astral-sh/ruff)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![ko-fi](https://img.shields.io/badge/Ko--fi-Buy%20me%20a%20coffee-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/gnaixnaij)
 [![Web App](https://img.shields.io/badge/Web%20App-deobfuscator--web.onrender.com-58a6ff?style=flat-square)](https://deobfuscator-web.onrender.com)
 
@@ -7,7 +10,9 @@ Deobfuscate PowerShell, VBA, and JavaScript scripts using static analysis and/or
 
 **🌐 Try the web version: https://deobfuscator-web.onrender.com**
 
-Detects and reverses common obfuscation techniques to reveal the original intent of malicious scripts.
+Detects and reverses common obfuscation techniques to reveal the original intent of malicious scripts. Combines deterministic static analysis with optional AI-powered LLM analysis for deeper understanding.
+
+---
 
 ## Install
 
@@ -16,6 +21,8 @@ git clone git@github.com:gnaixnaij/deobfuscator.git
 cd deobfuscator
 pip install -e .
 ```
+
+Requires Python 3.8+.
 
 ## Usage
 
@@ -58,6 +65,33 @@ deobfuscator -f script.ps1 -l powershell
 deobfuscator -f script.txt -l vba
 deobfuscator -f script.txt -l javascript
 ```
+
+## Architecture
+
+```
+deobfuscator/
+├── cli.py          # CLI entry point, argument parsing, output formatting
+├── core.py         # Language detection, static engine dispatch
+├── static/         # Per-language static deobfuscation engines
+│   ├── powershell.py
+│   ├── vba.py
+│   └── javascript.py
+├── llm/            # LLM-based deobfuscation (optional)
+│   └── deobfuscate.py
+└── __init__.py
+```
+
+### Static analysis pipeline
+
+1. **Detect language** — from file extension or content heuristics
+2. **Apply static rules** — each language has dedicated deobfuscation techniques
+3. **Return clean output** — reveals original intent without execution
+
+### LLM pipeline (optional)
+
+1. Send deobfuscated script to an OpenAI-compatible API
+2. LLM identifies additional obfuscation techniques
+3. Returns a cleaner reconstruction and summary
 
 ## Supported Languages & Techniques
 
@@ -114,6 +148,15 @@ var _0x5678 = "https://evil.com";
 | Variable | Description |
 |----------|-------------|
 | `OPENAI_API_KEY` | API key for LLM-powered deobfuscation |
+
+## Development
+
+```bash
+git clone git@github.com:gnaixnaij/deobfuscator.git
+cd deobfuscator
+pip install -e ".[dev]"
+ruff check .
+```
 
 ## Support
 
